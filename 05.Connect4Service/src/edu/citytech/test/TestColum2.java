@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import edu.citytech.service.Connect4Service;
 
-class TestColum1 {
+class TestColum2 {
 
 	@Test
 	void test1() {
@@ -15,10 +15,10 @@ class TestColum1 {
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"};
+				         ,"O","X","?","?","?","?","?"};
 		
 		int validPosition = Connect4Service.getValidCellMoves(moves, 0);
-		assertTrue(validPosition == 35, "validPosition: " + validPosition);
+		assertTrue(validPosition == 36, "validPosition: " + validPosition);
 
 	}
 
@@ -28,11 +28,11 @@ class TestColum1 {
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
-				         ,"O","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"};
+				         ,"?","O","?","?","?","?","?"
+				         ,"?","X","?","?","?","?","?"};
 		
 		int validPosition = Connect4Service.getValidCellMoves(moves, 0);
-		assertTrue(validPosition == 28, "validPosition: " + validPosition);
+		assertTrue(validPosition == 29, "validPosition: " + validPosition);
 	
 	}
 
@@ -41,12 +41,12 @@ class TestColum1 {
 		String[] moves = {"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"
-				         ,"O","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"};
+				         ,"?","X","?","?","?","?","?"
+				         ,"?","O","?","?","?","?","?"
+				         ,"?","X","?","?","?","?","?"};
 		
 		int validPosition = Connect4Service.getValidCellMoves(moves, 0);
-		assertTrue(validPosition == 21, "validPosition: " + validPosition);
+		assertTrue(validPosition == 22, "validPosition: " + validPosition);
 	
 	}	
 	
@@ -54,41 +54,41 @@ class TestColum1 {
 	void test4() {
 		String[] moves = {"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
-				         ,"O","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"
-				         ,"O","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"};
+				         ,"?","O","?","?","?","?","?"
+				         ,"?","X","?","?","?","?","?"
+				         ,"?","O","?","?","?","?","?"
+				         ,"?","X","?","?","?","?","?"};
 		
 		int validPosition = Connect4Service.getValidCellMoves(moves, 0);
-		assertTrue(validPosition == 14, "validPosition: " + validPosition);
+		assertTrue(validPosition == 15, "validPosition: " + validPosition);
 	
 	}
 	
 	@Test
 	void test5() {
 		String[] moves = {"?","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"
-				         ,"O","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"
-				         ,"O","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"};
+				         ,"?","X","?","?","?","?","?"
+				         ,"?","O","?","?","?","?","?"
+				         ,"?","X","?","?","?","?","?"
+				         ,"?","O","?","?","?","?","?"
+				         ,"?","X","?","?","?","?","?"};
 		
 		int validPosition = Connect4Service.getValidCellMoves(moves, 0);
-		assertTrue(validPosition == 7, "validPosition: " + validPosition);
+		assertTrue(validPosition == 8, "validPosition: " + validPosition);
 	
 	}	
 	
 	@Test
 	void test6() {
-		String[] moves = {"O","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"
-				         ,"O","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"
-				         ,"O","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"};
+		String[] moves = {"?","O","?","?","?","?","?"
+				         ,"?","X","?","?","?","?","?"
+				         ,"?","O","?","?","?","?","?"
+				         ,"?","X","?","?","?","?","?"
+				         ,"?","O","?","?","?","?","?"
+				         ,"?","X","?","?","?","?","?"};
 		
 		int validPosition = Connect4Service.getValidCellMoves(moves, 0);
-		assertTrue(validPosition == 0, "validPosition: " + validPosition);
+		assertTrue(validPosition == 1, "validPosition: " + validPosition);
 	
 	}	
    }
