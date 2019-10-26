@@ -15,7 +15,7 @@ class TestColum2 {
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
-				         ,"O","X","?","?","?","?","?"};
+				         ,"?","X","?","?","?","?","?"};
 		
 		int validPosition = Connect4Service.getValidCellMoves(moves, 0);
 		assertTrue(validPosition == 36, "validPosition: " + validPosition);
