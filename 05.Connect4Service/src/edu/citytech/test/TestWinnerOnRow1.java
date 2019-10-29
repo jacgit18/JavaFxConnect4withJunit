@@ -17,7 +17,7 @@ class TestWinnerOnRow1 {
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"};
+				         ,"?","?","?","?","?","?","?"};
 		
 		int [] winners = Connect4Service.getWinner(moves);
 		boolean c1 = winners[0] == 0 && winners[1] == 1
@@ -34,7 +34,7 @@ class TestWinnerOnRow1 {
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"};
+				         ,"?","?","?","?","?","?","?"};
 		
 		int [] winners = Connect4Service.getWinner(moves);
 		boolean c1 = winners[0] == 1 && winners[1] == 2
@@ -51,7 +51,7 @@ class TestWinnerOnRow1 {
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"};
+				         ,"?","?","?","?","?","?","?"};
 		
 		int [] winners = Connect4Service.getWinner(moves);
 		boolean c1 = winners[0] == 2 && winners[1] == 3
@@ -68,7 +68,24 @@ class TestWinnerOnRow1 {
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
-				         ,"X","?","?","?","?","?","?"};
+				         ,"?","?","?","?","?","?","?"};
+		
+		int [] winners = Connect4Service.getWinner(moves);
+		boolean c1 = winners.length == 0;
+		
+		assertTrue(c1, "validPosition: " + Arrays.toString(winners));
+
+	}
+	
+
+	@Test
+	void testRow1E() {
+		String[] moves = {"?","?","?","?","?","?","?"
+				         ,"?","?","?","?","?","?","?"
+				         ,"?","?","?","?","?","?","?"
+				         ,"?","?","?","?","?","?","?"
+				         ,"?","?","?","?","?","?","?"
+				         ,"?","?","?","?","?","?","?"};
 		
 		int [] winners = Connect4Service.getWinner(moves);
 		boolean c1 = winners.length == 0;
