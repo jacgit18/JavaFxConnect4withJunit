@@ -37,7 +37,7 @@ public class Connect4Service {
 	public static int[] getWinner(String[] moves) {
 
 		int [] status = {};
-		boolean isWinner = findWinner(moves[0], moves[1], moves[2], moves[3])
+		boolean isWinner = findWinner(moves[0], moves[1], moves[2], moves[3]);
 
 		if (isWinner) {
 			status = new int [] {0,1,2,3};
