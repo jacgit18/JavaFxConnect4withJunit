@@ -26,5 +26,40 @@ public class Connect4Service {
 				
 				return p;
 			}
+	/**
+	 * if no winner is found return an empty array
+	 * @param moves
+	 * @return
+	 */
+
+	public static int[] getLoser(String[] moves) {
+
+		int [] status = {};
+		return status;
+	}
+	
+	public static int[] getWinner(String[] moves) {
+
+	
+      String mymoves [] =  moves;
+		
+
+		 
+   			 while (mymoves < moves.length) {
+   	 status = moves [p].equals("?");
+   	
+   	if (status) {
+			p = p + 7;
+			
+		}else{
+			break;
+		}
+   }
+		
+
+		
+		
+		return status;
+	}
 
 }
