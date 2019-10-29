@@ -70,7 +70,7 @@ class TestWinnerOnRow1 {
 				         ,"?","?","?","?","?","?","?"
 				         ,"X","?","?","?","?","?","?"};
 		
-		int [] winners = Connect4Service.getLoser(moves);
+		int [] winners = Connect4Service.getWinner(moves);
 		boolean c1 = winners.length == 0;
 		
 		assertTrue(c1, "validPosition: " + Arrays.toString(winners));

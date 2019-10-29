@@ -26,40 +26,64 @@ public class Connect4Service {
 				
 				return p;
 			}
+	
+	
 	/**
 	 * if no winner is found return an empty array
 	 * @param moves
 	 * @return
 	 */
 
-	public static int[] getLoser(String[] moves) {
-
-		int [] status = {};
-		return status;
-	}
-	
 	public static int[] getWinner(String[] moves) {
 
-	
-      String mymoves [] =  moves;
-		
+		int [] status = {};
+		boolean isWinner = findWinner(moves[0], moves[1], moves[2], moves[3])
 
-		 
-   			 while (mymoves < moves.length) {
-   	 status = moves [p].equals("?");
-   	
-   	if (status) {
-			p = p + 7;
-			
-		}else{
-			break;
+		if (isWinner) {
+			status = new int [] {0,1,2,3};
 		}
-   }
 		
-
+		return status;
+	}
+	
+	private static boolean [] findWinner(String p1, String p2, String p3, String p4) {
+		boolean status = p1.equals("X") && p2.equals("X") && 
+			p3.equals("X") && p4.equals("X");
 		
 		
 		return status;
 	}
+	
+//	public static int[] getWinner(String[] moves) {
+//
+//      boolean status = moves [0] == "X" && moves [1] == "X" 
+//				&& moves [2] == "X" && moves [3] == "X";
+//
+//		if ( status == true) {
+//	
+//
+//    
+//		 }
+//		return status;
+//
+//
+//		
+//
+////		 
+////   			 while (mymoves < moves.length) {
+////   	 status = moves [mymoves].equals("?");
+////   	
+////   	if (status) {
+////   		mymoves = mymoves + 7;
+////			
+////		}else{
+////			break;
+////		}
+////   }
+//		
+//
+//		
+//		
+//	}
 
 }
