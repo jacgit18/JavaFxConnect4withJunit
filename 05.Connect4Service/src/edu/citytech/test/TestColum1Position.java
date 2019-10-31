@@ -7,7 +7,11 @@ import org.junit.jupiter.api.Test;
 import edu.citytech.service.Connect4Service;
 
 class TestColum1Position {
+<<<<<<< HEAD
 
+=======
+// debug and find out logic
+>>>>>>> branch 'master' of https://github.com/jacgit18/JavaFxConnect4withJunit.git
 	@Test
 	void test1() {
 		String[] moves = {"?","?","?","?","?","?","?"
