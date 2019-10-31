@@ -6,8 +6,8 @@ import org.junit.jupiter.api.Test;
 
 import edu.citytech.service.Connect4Service;
 
-class TestColum1 {
-
+class TestColum1Position {
+// debug and find out logic
 	@Test
 	void test1() {
 		String[] moves = {"?","?","?","?","?","?","?"

@@ -51,6 +51,22 @@ public class Connect4Service {
 			status = new int [] {2,3,4,5};
 		}
 		
+		else if (findWinner(moves[3], moves[4], moves[5], moves[6])) {
+			status = new int [] {3,4,5,6};
+		}
+		
+		else if (findWinner(moves[0], moves[7], moves[14], moves[21])) {
+			status = new int [] {0,7,14,21};
+		}
+		
+		else if (findWinner( moves[7], moves[14], moves[21], moves[28])) {
+			status = new int [] {7,14,21,28};
+		}
+		
+		else if (findWinner( moves[14], moves[21], moves[28], moves[35] )) {
+			status = new int [] {14,21,28,35};
+		}
+		
 		return status;
 	}
 	
