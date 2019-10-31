@@ -112,36 +112,6 @@ public class Connect4Service {
 		return status;
 	}
 	
-//	public static int[] getWinner(String[] moves) {
-//
-//      boolean status = moves [0] == "X" && moves [1] == "X" 
-//				&& moves [2] == "X" && moves [3] == "X";
-//
-//		if ( status == true) {
-//	
-//
-//    
-//		 }
-//		return status;
-//
-//
-//		
-//
-////		 
-////   			 while (mymoves < moves.length) {
-////   	 status = moves [mymoves].equals("?");
-////   	
-////   	if (status) {
-////   		mymoves = mymoves + 7;
-////			
-////		}else{
-////			break;
-////		}
-////   }
-//		
-//
-//		
-//		
-//	}
+
 
 }
