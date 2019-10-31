@@ -9,9 +9,9 @@ import org.junit.jupiter.api.Test;
 import edu.citytech.service.Connect4Service;
 
 class TestWinnerOnColum1 {
-//my com
+
 	@Test
-	void testColum1() {
+	void testColum1_0_X() {
 		String[] moves = {"X","?","?","?","?","?","?"
 				         ,"X","?","?","?","?","?","?"
 				         ,"X","?","?","?","?","?","?"
@@ -29,7 +29,7 @@ class TestWinnerOnColum1 {
 
 
 	@Test
-	void testColum1_2() {
+	void testColum1_1_X() {
 		String[] moves = {"?","?","?","?","?","?","?"
 				         ,"X","?","?","?","?","?","?"
 				         ,"X","?","?","?","?","?","?"
@@ -46,7 +46,7 @@ class TestWinnerOnColum1 {
 	}
 	
 	@Test
-	void testColum1_3() {
+	void testColum1_2_X() {
 		String[] moves = {"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
 				         ,"X","?","?","?","?","?","?"
@@ -63,7 +63,7 @@ class TestWinnerOnColum1 {
 	}
 	
 	@Test
-	void testColum1_1o() {
+	void testColum1_0_Circle() {
 		String[] moves = {"O","?","?","?","?","?","?"
 				         ,"O","?","?","?","?","?","?"
 				         ,"O","?","?","?","?","?","?"
@@ -81,7 +81,7 @@ class TestWinnerOnColum1 {
 
 
 	@Test
-	void testColum1_2o() {
+	void testColum1_1_Circle() {
 		String[] moves = {"?","?","?","?","?","?","?"
 				         ,"O","?","?","?","?","?","?"
 				         ,"O","?","?","?","?","?","?"
@@ -98,7 +98,7 @@ class TestWinnerOnColum1 {
 	}
 	
 	@Test
-	void testColum1_3o() {
+	void testColum1_2_Circle() {
 		String[] moves = {"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
 				         ,"O","?","?","?","?","?","?"
@@ -115,7 +115,7 @@ class TestWinnerOnColum1 {
 	}
 	
 	@Test
-	void testColum1_notwinner() {
+	void testColum1_NoMatch() {
 		String[] moves = {"O","?","?","?","?","?","?"
 				         ,"X","?","?","?","?","?","?"
 				         ,"X","?","?","?","?","?","?"
@@ -128,6 +128,22 @@ class TestWinnerOnColum1 {
 		
 		assertTrue(c1, "validPosition: " + Arrays.toString(winners));
 
+
+	}
+	
+	@Test
+	void testColum1_Empty() {
+		String[] moves = {"?","?","?","?","?","?","?"
+				         ,"?","?","?","?","?","?","?"
+				         ,"?","?","?","?","?","?","?"
+				         ,"?","?","?","?","?","?","?"
+				         ,"?","?","?","?","?","?","?"
+				         ,"?","?","?","?","?","?","?"};
+		
+		int [] winners = Connect4Service.getWinner(moves);
+		boolean c1 = winners.length == 0;
+		
+		assertTrue(c1, "validPosition: " + Arrays.toString(winners));
 
 	}
 
