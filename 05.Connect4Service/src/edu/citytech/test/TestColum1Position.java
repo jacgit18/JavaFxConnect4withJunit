@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import edu.citytech.service.Connect4Service;
 
-class TestColum1 {
+class TestColum1Position {
 
 	@Test
 	void test1() {
