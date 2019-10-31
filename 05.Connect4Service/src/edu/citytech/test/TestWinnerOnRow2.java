@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import edu.citytech.service.Connect4Service;
 
-class TestWinnerOnRow1 {
+class TestWinnerOnRow2 {
 
 
 	@Test
