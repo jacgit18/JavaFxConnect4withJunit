@@ -11,6 +11,14 @@
    -fx-background-color: #bbb;
    -fx-border-radius: 50%;
    -fx-display: inline-block;
+   
+}
+.gamecolor{
+   -fx-background-color: blue;
+}
+
+.gamecolor{
+   -fx-background-color: white;
 }
 
 .custom-label {
@@ -18,4 +26,9 @@
    -fx-min-height: 130px;
    -fx-min-width: 130px;
    -fx-border-insets: .55px
+}
+
+.float-container {
+  -fborder: solid 1px #ccc;
+  position: relative;
 }
