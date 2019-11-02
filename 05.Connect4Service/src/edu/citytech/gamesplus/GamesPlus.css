@@ -1,34 +1,26 @@
-.title-label, .custom-label {
+.title-label{
    -fx-font-size: 70px;
    -fx-alignment: center;
 }
 
- .custom-label {
-   -fx-font-size: 70px;
-   -fx-alignment: center;
-   -fx-height: 25px;
-   -fx-width: 25px;
-   -fx-background-color: #bbb;
-   -fx-border-radius: 50%;
-   -fx-display: inline-block;
-   
-}
-.gamecolor{
-   -fx-background-color: blue;
-}
 
 .gamecolor{
-   -fx-background-color: white;
+   -fx-background-color: lightblue;
 }
+
+.gamecolor1{
+   -fx-background-color: lightgrey;
+}
+
 
 .custom-label {
+   -fx-alignment: center;
+   -fx-background-color: #bbb;
    -fx-border-color:black;
-   -fx-min-height: 130px;
-   -fx-min-width: 130px;
+   -fx-min-height: 60px;
+   -fx-min-width: 65px;
    -fx-border-insets: .55px
+   
 }
 
-.float-container {
-  -fborder: solid 1px #ccc;
-  position: relative;
-}
+

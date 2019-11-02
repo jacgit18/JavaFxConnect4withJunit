@@ -4,52 +4,78 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="931.0" prefWidth="1112.0" stylesheets="@GamesPlus.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.citytech.gamesplus.GamesPlusController">
-	<children>
-		<FlowPane fx:id="fpGames" layoutX="148.0" layoutY="85.0" prefHeight="780.0" prefWidth="784.0" stylesheets="@GamesPlus.css">
-			<children>
-				<Label fx:id="lbl_1" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-				<Label fx:id="lbl_2" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-				<Label fx:id="lbl_3" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-				<Label fx:id="lbl_4" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-				<Label fx:id="lbl_5" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-				<Label fx:id="lbl_6" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-				<Label fx:id="lbl_7" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-				<Label fx:id="lbl_8" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-				<Label fx:id="lbl_9" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_10" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_11" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_12" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_13" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_14" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_15" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_16" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_17" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_18" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_19" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_20" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_21" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_22" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_23" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_24" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_25" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_26" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_27" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_28" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_29" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_30" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_31" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_32" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_33" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_34" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_35" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-        <Label fx:id="lbl_36" onMouseClicked="#onMouseClicked" styleClass="custom-label" text="" />
-			</children>
-		</FlowPane>
-		<Label layoutX="341.0" styleClass="title-label" stylesheets="@GamesPlus.css" text="Tic Tac Toe" />
-		<Button fx:id="btnReset" layoutX="513.0" layoutY="879.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
-      <Label fx:id="lblMessage" layoutX="31.0" layoutY="884.0" prefHeight="17.0" prefWidth="400.0" text="Label" />
-      <Label layoutX="815.0" layoutY="892.0" text="Joshua Carpentier" />
-	</children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1004.0" prefWidth="840.0" styleClass="gamecolor1" stylesheets="@GamesPlus.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.citytech.gamesplus.GamesPlusController">
+   <children>
+      <FlowPane fx:id="fpGames" layoutX="161.0" layoutY="147.0" prefHeight="601.0" prefWidth="545.0" styleClass="gamecolor">
+         <children>
+            <HBox fx:id="Row1" prefHeight="100.0" prefWidth="200.0" styleClass="gamecolor">
+               <children>
+                  <Circle fx:id="circ_1" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_2" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_3" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_4" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_5" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_6" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+               </children>
+            </HBox>
+            <HBox fx:id="Row2" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Circle fx:id="circ_7" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_8" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_9" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_10" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_11" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_12" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+               </children>
+            </HBox>
+            <HBox fx:id="Row3" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Circle fx:id="circ_13" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_14" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_15" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_16" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_17" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_18" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+               </children>
+            </HBox>
+            <HBox fx:id="Row4" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Circle fx:id="circ_19" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_20" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_21" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_22" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_23" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_24" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+               </children>
+            </HBox>
+            <HBox fx:id="Row5" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Circle fx:id="circ_25" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_26" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_27" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_28" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_29" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_30" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+               </children>
+            </HBox>
+            <HBox fx:id="Row6" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Circle fx:id="circ_31" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_32" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_33" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_34" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_35" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+                  <Circle fx:id="circ_36" fill="WHITE" onMouseClicked="#onMouseClicked" radius="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="custom-label" />
+               </children>
+            </HBox>
+         </children>
+      </FlowPane>
+      <Label fx:id="Title" layoutX="255.0" layoutY="52.0" styleClass="title-label" text="Connect 4" />
+      <Label fx:id="Name" layoutX="554.0" layoutY="796.0" text="Joshua Carpentier" />
+      <Label fx:id="lbl_Message" layoutX="198.0" layoutY="796.0" text="Label" />
+      <Button fx:id="btn_Reset" layoutX="403.0" layoutY="791.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+   </children>
 </AnchorPane>

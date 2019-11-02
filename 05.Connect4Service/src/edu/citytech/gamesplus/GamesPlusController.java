@@ -6,6 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 
 public class GamesPlusController {
 
@@ -13,118 +16,142 @@ public class GamesPlusController {
     private FlowPane fpGames;
 
     @FXML
-    private Label lbl_1;
+    private HBox Row1;
 
     @FXML
-    private Label lbl_2;
+    private Circle circ_1;
 
     @FXML
-    private Label lbl_3;
+    private Circle circ_2;
 
     @FXML
-    private Label lbl_4;
+    private Circle circ_3;
 
     @FXML
-    private Label lbl_5;
+    private Circle circ_4;
 
     @FXML
-    private Label lbl_6;
+    private Circle circ_5;
 
     @FXML
-    private Label lbl_7;
+    private Circle circ_6;
 
     @FXML
-    private Label lbl_8;
+    private HBox Row2;
 
     @FXML
-    private Label lbl_9;
+    private Circle circ_7;
 
     @FXML
-    private Label lbl_10;
+    private Circle circ_8;
 
     @FXML
-    private Label lbl_11;
+    private Circle circ_9;
 
     @FXML
-    private Label lbl_12;
+    private Circle circ_10;
 
     @FXML
-    private Label lbl_13;
+    private Circle circ_11;
 
     @FXML
-    private Label lbl_14;
+    private Circle circ_12;
 
     @FXML
-    private Label lbl_15;
+    private HBox Row3;
 
     @FXML
-    private Label lbl_16;
+    private Circle circ_13;
 
     @FXML
-    private Label lbl_17;
+    private Circle circ_14;
 
     @FXML
-    private Label lbl_18;
+    private Circle circ_15;
 
     @FXML
-    private Label lbl_19;
+    private Circle circ_16;
 
     @FXML
-    private Label lbl_20;
+    private Circle circ_17;
 
     @FXML
-    private Label lbl_21;
+    private Circle circ_18;
 
     @FXML
-    private Label lbl_22;
+    private HBox Row4;
 
     @FXML
-    private Label lbl_23;
+    private Circle circ_19;
 
     @FXML
-    private Label lbl_24;
+    private Circle circ_20;
 
     @FXML
-    private Label lbl_25;
+    private Circle circ_21;
 
     @FXML
-    private Label lbl_26;
+    private Circle circ_22;
 
     @FXML
-    private Label lbl_27;
+    private Circle circ_23;
 
     @FXML
-    private Label lbl_28;
+    private Circle circ_24;
 
     @FXML
-    private Label lbl_29;
+    private HBox Row5;
 
     @FXML
-    private Label lbl_30;
+    private Circle circ_25;
 
     @FXML
-    private Label lbl_31;
+    private Circle circ_26;
 
     @FXML
-    private Label lbl_32;
+    private Circle circ_27;
 
     @FXML
-    private Label lbl_33;
+    private Circle circ_28;
 
     @FXML
-    private Label lbl_34;
+    private Circle circ_29;
 
     @FXML
-    private Label lbl_35;
+    private Circle circ_30;
 
     @FXML
-    private Label lbl_36;
+    private HBox Row6;
 
     @FXML
-    private Button btnReset;
+    private Circle circ_31;
 
     @FXML
-    private Label lblMessage;
+    private Circle circ_32;
+
+    @FXML
+    private Circle circ_33;
+
+    @FXML
+    private Circle circ_34;
+
+    @FXML
+    private Circle circ_35;
+
+    @FXML
+    private Circle circ_36;
+
+    @FXML
+    private Label Title;
+
+    @FXML
+    private Label Name;
+
+    @FXML
+    private Label lbl_Message;
+
+    @FXML
+    private Button btn_Reset;
     
 	private boolean isX = false;
 
@@ -132,117 +159,136 @@ public class GamesPlusController {
     @FXML
     void onMouseClicked(MouseEvent event) {
     	
-    	Label label = (Label) event.getSource();
-		if (!label.getText().equals("?")) {
-			String value = "illegal move";
-			lblMessage.setText(value);
 
-			return;
+
+    	circ_1.setFill(Color.RED);
+    	circ_2.setFill(Color.RED);
+    	circ_3.setFill(Color.RED);
+    	circ_4.setFill(Color.RED);
+    	circ_5.setFill(Color.RED);
+    	circ_6.setFill(Color.RED);
+    	circ_7.setFill(Color.RED);
+    	circ_8.setFill(Color.RED);
+    	circ_9.setFill(Color.RED);
+    	
+    	circ_10.setFill(Color.RED);
+    	circ_11.setFill(Color.RED);
+    	circ_12.setFill(Color.RED);
+    	circ_13.setFill(Color.RED);
+    	circ_14.setFill(Color.RED);
+    	circ_15.setFill(Color.RED);
+    	circ_16.setFill(Color.RED);
+    	circ_17.setFill(Color.RED);
+    	circ_18.setFill(Color.RED);
+    	
+    	circ_19.setFill(Color.RED);
+    	circ_20.setFill(Color.RED);
+    	circ_21.setFill(Color.RED);
+    	circ_22.setFill(Color.RED);
+    	circ_23.setFill(Color.RED);
+    	circ_24.setFill(Color.RED);
+    	circ_25.setFill(Color.RED);
+    	circ_26.setFill(Color.RED);
+    	circ_27.setFill(Color.RED);
+    	
+    	circ_28.setFill(Color.RED);
+    	circ_29.setFill(Color.RED);
+    	circ_30.setFill(Color.RED);
+    	circ_31.setFill(Color.RED);
+    	circ_32.setFill(Color.RED);
+    	circ_33.setFill(Color.RED);
+    	circ_34.setFill(Color.RED);
+    	circ_35.setFill(Color.RED);
+    	circ_36.setFill(Color.RED);
+    	
+    	//circ_1.setFill(Color.BLUE);
+    	//circ_2.setFill(Color.BLUE);
+    	//circ_3.setFill(Color.BLUE);
+    	//circ_4.setFill(Color.BLUE);
+    	//circ_5.setFill(Color.BLUE);
+    	//circ_6.setFill(Color.BLUE);
+    	//circ_7.setFill(Color.BLUE);
+    	//circ_8.setFill(Color.BLUE);
+    	//circ_9.setFill(Color.BLUE);
+    	//
+    	//circ_10.setFill(Color.BLUE);
+    	//circ_11.setFill(Color.BLUE);
+    	//circ_12.setFill(Color.BLUE);
+    	//circ_13.setFill(Color.BLUE);
+    	//circ_14.setFill(Color.BLUE);
+    	//circ_15.setFill(Color.BLUE);
+    	//circ_16.setFill(Color.BLUE);
+    	//circ_17.setFill(Color.BLUE);
+    	//circ_18.setFill(Color.BLUE);
+    	//
+    	//circ_19.setFill(Color.BLUE);
+    	//circ_20.setFill(Color.BLUE);
+    	//circ_21.setFill(Color.BLUE);
+    	//circ_22.setFill(Color.BLUE);
+    	//circ_23.setFill(Color.BLUE);
+    	//circ_24.setFill(Color.BLUE);
+    	//circ_25.setFill(Color.BLUE);
+    	//circ_26.setFill(Color.BLUE);
+    	//circ_27.setFill(Color.BLUE);
+    	//
+    	//circ_28.setFill(Color.BLUE);
+    	//circ_29.setFill(Color.BLUE);
+    	//circ_30.setFill(Color.BLUE);
+    	//circ_31.setFill(Color.BLUE);
+    	//circ_32.setFill(Color.BLUE);
+    	//circ_33.setFill(Color.BLUE);
+    	//circ_34.setFill(Color.BLUE);
+    	//circ_35.setFill(Color.BLUE);
+    	//circ_36.setFill(Color.BLUE);
+    	
+    	
+    	
 		}
 
-		String nextMove = isX ? "X" : "O";
-		label.setText(nextMove);
-		isX = !isX;
-
-		String p1, p2, p3, p4, p5, p6, p7, p8, p9, p10,p11;
-		p1 = lbl_1.getText();
-		p2 = lbl_2.getText();
-		p3 = lbl_3.getText();
-		p4 = lbl_4.getText();
-		p5 = lbl_5.getText();
-		p6 = lbl_6.getText();
-		p7 = lbl_7.getText();
-		p8 = lbl_8.getText();
-		p9 = lbl_9.getText();
-		p1 = lbl_1.getText();
-		p2 = lbl_2.getText();
-		p3 = lbl_3.getText();
-		p4 = lbl_4.getText();
-		p5 = lbl_5.getText();
-		p6 = lbl_6.getText();
-		p7 = lbl_7.getText();
-		p8 = lbl_8.getText();
-		p9 = lbl_9.getText();
-		p1 = lbl_1.getText();
-		p2 = lbl_2.getText();
-		p3 = lbl_3.getText();
-		p4 = lbl_4.getText();
-		p5 = lbl_5.getText();
-		p6 = lbl_6.getText();
-		p7 = lbl_7.getText();
-		p8 = lbl_8.getText();
-		p9 = lbl_9.getText();
-		p1 = lbl_1.getText();
-		p2 = lbl_2.getText();
-		p3 = lbl_3.getText();
-		p4 = lbl_4.getText();
-		p5 = lbl_5.getText();
-		p6 = lbl_6.getText();
-		p7 = lbl_7.getText();
-		p8 = lbl_8.getText();
-		p9 = lbl_9.getText();
-
-    
-    	
-    	// try multi-dimensional array buttom will be filled first
-    			 int p = 0;
-    			 String [] [] moves = new String[6] [6]; // grid is 6 by 6
-    			 String []moves1 = new String[41]; // ranges from 1 to 41 but index would be 0 to 40
-
-    			 
-    			 while (p < moves.length) {
-    	boolean status = moves [p].equals("p");
-    	
-    	if (status) {
-			p = p + 7;
-		}else{
-			break;
-		}
-
-    }
-}
+		
 
     @FXML
     void reset(ActionEvent event) {
-    	lbl_1.setText("?");
-		lbl_2.setText("?");
-		lbl_3.setText("?");
-		lbl_4.setText("?");
-		lbl_5.setText("?");
-		lbl_6.setText("?");
-		lbl_7.setText("?");
-		lbl_8.setText("?");
-		lbl_9.setText("?");
-		lbl_10.setText("?");
-		lbl_11.setText("?");
-		lbl_12.setText("?");
-		lbl_13.setText("?");
-		lbl_14.setText("?");
-		lbl_15.setText("?");
-		lbl_16.setText("?");
-		lbl_17.setText("?");
-		lbl_18.setText("?");
-		lbl_19.setText("?");
-		lbl_20.setText("?");
-		lbl_21.setText("?");
-		lbl_22.setText("?");
-		lbl_23.setText("?");
-		lbl_24.setText("?");
-		lbl_25.setText("?");
-		lbl_26.setText("?");
-		lbl_27.setText("?");
-		lbl_28.setText("?");
-		lbl_29.setText("?");
-		lbl_30.setText("?");
-		lbl_31.setText("?");
-		lbl_32.setText("?");
-		lbl_33.setText("?");
-		lbl_34.setText("?");
-		lbl_35.setText("?");
-		lbl_36.setText("?");
-		lblMessage.setText("");
-
-   
+    	
+    	circ_1.setFill(Color.WHITE);
+    	circ_2.setFill(Color.WHITE);
+    	circ_3.setFill(Color.WHITE);
+    	circ_4.setFill(Color.WHITE);
+    	circ_5.setFill(Color.WHITE);
+    	circ_6.setFill(Color.WHITE);
+    	circ_7.setFill(Color.WHITE);
+    	circ_8.setFill(Color.WHITE);
+    	circ_9.setFill(Color.WHITE);
+    	
+    	circ_10.setFill(Color.WHITE);
+    	circ_11.setFill(Color.WHITE);
+    	circ_12.setFill(Color.WHITE);
+    	circ_13.setFill(Color.WHITE);
+    	circ_14.setFill(Color.WHITE);
+    	circ_15.setFill(Color.WHITE);
+    	circ_16.setFill(Color.WHITE);
+    	circ_17.setFill(Color.WHITE);
+    	circ_18.setFill(Color.WHITE);
+    	
+    	circ_19.setFill(Color.WHITE);
+    	circ_20.setFill(Color.WHITE);
+    	circ_21.setFill(Color.WHITE);
+    	circ_22.setFill(Color.WHITE);
+    	circ_23.setFill(Color.WHITE);
+    	circ_24.setFill(Color.WHITE);
+    	circ_25.setFill(Color.WHITE);
+    	circ_26.setFill(Color.WHITE);
+    	circ_27.setFill(Color.WHITE);
+    	
+    	circ_28.setFill(Color.WHITE);
+    	circ_29.setFill(Color.WHITE);
+    	circ_30.setFill(Color.WHITE);
+    	circ_31.setFill(Color.WHITE);
+    	circ_32.setFill(Color.WHITE);
+    	circ_33.setFill(Color.WHITE);
+    	circ_34.setFill(Color.WHITE);
+    	circ_35.setFill(Color.WHITE);
+    	circ_36.setFill(Color.WHITE);
 			 
 		 }
 		
