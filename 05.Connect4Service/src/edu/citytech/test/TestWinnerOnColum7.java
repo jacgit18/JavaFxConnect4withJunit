@@ -8,20 +8,20 @@ import org.junit.jupiter.api.Test;
 
 import edu.citytech.service.Connect4Service;
 
-class TestWinnerOnColum6 {
+class TestWinnerOnColum7 {
 
 	@Test
-	void testColum6_0_X() {
-		String[] moves = {"?","?","?","?","?","X","?"
-				         ,"?","?","?","?","?","X","?"
-				         ,"?","?","?","?","?","X","?"
-				         ,"?","?","?","?","?","X","?"
+	void testColum7_0_X() {
+		String[] moves = {"?","?","?","?","?","?","X"
+				         ,"?","?","?","?","?","?","X"
+				         ,"?","?","?","?","?","?","X"
+				         ,"?","?","?","?","?","?","X"
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"};
 		
 		int [] winners = Connect4Service.getWinner(moves);
-		boolean c1 = winners[0] == 5 && winners[1] == 12
-				&& winners[2] == 19 && winners[3] == 26;
+		boolean c1 = winners[0] == 6 && winners[1] == 13
+				&& winners[2] == 20 && winners[3] == 27;
 		
 		assertTrue(c1, "validPosition: " + Arrays.toString(winners));
 
@@ -29,51 +29,52 @@ class TestWinnerOnColum6 {
 
 
 	@Test
-	void testColum6_1_X() {
+	void testColum7_1_X() {
 		String[] moves = {"?","?","?","?","?","?","?"
-				         ,"?","?","?","?","?","X","?"
-				         ,"?","?","?","?","?","X","?"
-				         ,"?","?","?","?","?","X","?"
-				         ,"?","?","?","?","?","X","?"
+				         ,"?","?","?","?","?","?","X"
+				         ,"?","?","?","?","?","?","X"
+				         ,"?","?","?","?","?","?","X"
+				         ,"?","?","?","?","?","?","X"
 				         ,"?","?","?","?","?","?","?"};
 		
 		int [] winners = Connect4Service.getWinner(moves);
-		boolean c1 = winners[0] == 12 && winners[1] == 19
-				&& winners[2] == 26 && winners[3] == 33;
+		boolean c1 = winners[0] == 13 && winners[1] == 20
+				&& winners[2] == 27 && winners[3] == 34;
+		
 		
 		assertTrue(c1, "validPosition: " + Arrays.toString(winners));
 
 	}
 	
 	@Test
-	void testColum6_2_X() {
+	void testColum7_2_X() {
 		String[] moves = {"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
-				         ,"?","?","?","?","?","X","?"
-				         ,"?","?","?","?","?","X","?"
-				         ,"?","?","?","?","?","X","?"
-				         ,"?","?","?","?","?","X","?"};
+				         ,"?","?","?","?","?","?","X"
+				         ,"?","?","?","?","?","?","X"
+				         ,"?","?","?","?","?","?","X"
+				         ,"?","?","?","?","?","?","X"};
 		
 		int [] winners = Connect4Service.getWinner(moves);
-		boolean c1 = winners[0] == 19 && winners[1] == 26
-				&& winners[2] == 33 && winners[3] == 40;
+		boolean c1 = winners[0] == 20 && winners[1] == 27
+				&& winners[2] == 34 && winners[3] == 41;
 		
 		assertTrue(c1, "validPosition: " + Arrays.toString(winners));
 
 	}
 	
 	@Test
-	void testColum6_0_Circle() {
-		String[] moves = {"?","?","?","?","?","O","?"
-				         ,"?","?","?","?","?","O","?"
-				         ,"?","?","?","?","?","O","?"
-				         ,"?","?","?","?","?","O","?"
+	void testColum7_0_Circle() {
+		String[] moves = {"?","?","?","?","?","?","O"
+				         ,"?","?","?","?","?","?","O"
+				         ,"?","?","?","?","?","?","O"
+				         ,"?","?","?","?","?","?","O"
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"};
 		
 		int [] winners = Connect4Service.getWinner(moves);
-		boolean c1 = winners[0] == 5 && winners[1] == 12
-				&& winners[2] == 19 && winners[3] == 26;
+		boolean c1 = winners[0] == 6 && winners[1] == 13
+				&& winners[2] == 20 && winners[3] == 27;
 		
 		assertTrue(c1, "validPosition: " + Arrays.toString(winners));
 
@@ -81,45 +82,46 @@ class TestWinnerOnColum6 {
 
 
 	@Test
-	void testColum6_1_Circle() {
+	void testColum7_1_Circle() {
 		String[] moves = {"?","?","?","?","?","?","?"
-				         ,"?","?","?","?","?","O","?"
-				         ,"?","?","?","?","?","O","?"
-				         ,"?","?","?","?","?","O","?"
-				         ,"?","?","?","?","?","O","?"
+				         ,"?","?","?","?","?","?","O"
+				         ,"?","?","?","?","?","?","O"
+				         ,"?","?","?","?","?","?","O"
+				         ,"?","?","?","?","?","?","O"
 				         ,"?","?","?","?","?","?","?"};
 		
 		int [] winners = Connect4Service.getWinner(moves);
-		boolean c1 = winners[0] == 12 && winners[1] == 19
-				&& winners[2] == 26 && winners[3] == 33;
+		boolean c1 = winners[0] == 13 && winners[1] == 20
+				&& winners[2] == 27 && winners[3] == 34;
+		
 		
 		assertTrue(c1, "validPosition: " + Arrays.toString(winners));
 
 	}
 	
 	@Test
-	void testColum6_2_Circle() {
+	void testColum7_2_Circle() {
 		String[] moves = {"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
-				         ,"?","?","?","?","?","O","?"
-				         ,"?","?","?","?","?","O","?"
-				         ,"?","?","?","?","?","O","?"
-				         ,"?","?","?","?","?","O","?"};
+				         ,"?","?","?","?","?","?","O"
+				         ,"?","?","?","?","?","?","O"
+				         ,"?","?","?","?","?","?","O"
+				         ,"?","?","?","?","?","?","O"};
 		
 		int [] winners = Connect4Service.getWinner(moves);
-		boolean c1 = winners[0] == 19 && winners[1] == 26
-				&& winners[2] == 33 && winners[3] == 40;
+		boolean c1 = winners[0] == 20 && winners[1] == 27
+				&& winners[2] == 34 && winners[3] == 41;
 		
 		assertTrue(c1, "validPosition: " + Arrays.toString(winners));
 
 	}
 	
 	@Test
-	void testColum6_NoMatch() {
-		String[] moves = {"?","?","?","?","?","0","?"
-				         ,"?","?","?","?","?","X","?"
-				         ,"?","?","?","?","?","X","?"
-				         ,"?","?","?","?","?","X","?"
+	void testColum7_NoMatch() {
+		String[] moves = {"?","?","?","?","?","?","0"
+				         ,"?","?","?","?","?","?","X"
+				         ,"?","?","?","?","?","?","X"
+				         ,"?","?","?","?","?","?","X"
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"};
 		
@@ -132,7 +134,7 @@ class TestWinnerOnColum6 {
 	}
 	
 	@Test
-	void testColum6_Empty() {
+	void testColum7_Empty() {
 		String[] moves = {"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"
 				         ,"?","?","?","?","?","?","?"

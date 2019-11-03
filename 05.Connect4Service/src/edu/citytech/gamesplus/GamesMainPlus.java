@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 public class GamesMainPlus extends Application {
 
-// 
+
 	public static void main(String[] args) {
 		Application.launch(GamesMainPlus.class, args);
 	}
@@ -20,7 +20,7 @@ public class GamesMainPlus extends Application {
 		Parent root = FXMLLoader.
 				 load(getClass().getResource("GamesPlus.fxml"));
 		
-		stage.setTitle("Tic Tac Toe");
+		stage.setTitle("Connect 4");
 		Scene scene = new Scene(root); 
 		stage.setScene(scene);
 		stage.show();		
