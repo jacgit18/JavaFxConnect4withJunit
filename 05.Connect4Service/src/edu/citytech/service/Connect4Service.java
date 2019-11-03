@@ -111,15 +111,65 @@ public class Connect4Service {
 			status = new int [] {24,25, 26, 27};
 		}
 		
+		else if (findWinner( moves[28], moves[29], moves[30],moves[31]  )) {
+			status = new int [] {28, 29, 30, 31};
+		}
 		
+		else if (findWinner( moves[29], moves[30],moves[31],moves[32]   )) {
+			status = new int [] { 29, 30, 31, 32};
+		}
+		
+		else if (findWinner( moves[30], moves[31], moves[32],moves[33]  )) {
+			status = new int [] {30, 31, 32, 33};
+		}
+		
+		else if (findWinner( moves[31], moves[32],moves[33],moves[34]   )) {
+			status = new int [] { 31, 32, 33, 34};
+		}
+		
+		else if (findWinner( moves[35], moves[36],moves[37],moves[38]   )) {
+			status = new int [] { 35, 36, 37, 38};
+		}
+		
+		else if (findWinner( moves[36], moves[37],moves[38],moves[39]   )) {
+			status = new int [] { 36, 37, 38, 39};
+		}
+		
+		else if (findWinner(  moves[37],moves[38],moves[39],moves[40]   )) {
+			status = new int [] {37, 38, 39, 40};
+		}
+		
+		else if (findWinner(  moves[38],moves[39],moves[40],moves[41]   )) {
+			status = new int [] {38, 39, 40, 41};
+		}
 	
-		// Columns
+		// Columns //////////////////////////////////////////////////////
 		else if (findWinner(moves[0], moves[7], moves[14], moves[21])) {
 			status = new int [] {0,7,14,21};
 		}
 		
 		else if (findWinner(moves[1], moves[8], moves[15], moves[22])) {
 			status = new int [] {1,8,15,22};
+		}
+		
+		else if (findWinner(moves[2], moves[9], moves[16], moves[23])) {
+			status = new int [] {2,9,16,23};
+		}
+		
+		else if (findWinner(moves[3], moves[10], moves[17], moves[24])) {
+			status = new int [] {3,10,17,24};
+		}
+		
+		else if (findWinner(moves[4], moves[11], moves[18], moves[25])) {
+			status = new int [] {4,11,18,25};
+		}
+		
+		else if (findWinner(moves[5], moves[12], moves[19], moves[26])) {
+			status = new int [] {5,12,19,26};
+		}
+		
+		else if (findWinner( moves[6], moves[13], moves[20],moves[27])) {
+			status = new int [] {6,13,20,27};
 		}
 		
 		else if (findWinner( moves[7], moves[14], moves[21], moves[28])) {
@@ -130,6 +180,26 @@ public class Connect4Service {
 			status = new int [] {8,15,22,29};
 		}
 		
+		else if (findWinner( moves[9], moves[16], moves[23],moves[30])) {
+			status = new int [] {9,16,23,30};
+		}
+		
+		else if (findWinner( moves[10], moves[17], moves[24],moves[31])) {
+			status = new int [] {10,17,24,31};
+		}
+		
+		else if (findWinner(moves[11], moves[18], moves[25], moves[32])) {
+			status = new int [] {11,18,25,32};
+		}
+		
+		else if (findWinner(moves[12], moves[19], moves[26],moves[33])) {
+			status = new int [] {12,19,26,33};
+		}
+		
+		else if (findWinner( moves[13], moves[20], moves[27],moves[34])) {
+			status = new int [] {13,20,27,34};
+		}
+		
 		else if (findWinner( moves[14], moves[21], moves[28], moves[35] )) {
 			status = new int [] {14,21,28,35};
 		}
@@ -138,8 +208,29 @@ public class Connect4Service {
 			status = new int [] {15,22,29,36};
 		}
 		
+		else if (findWinner( moves[16], moves[23],moves[30],moves[37])) {
+			status = new int [] {16,23,30, 37};
+		}
 		
-		// diag
+		else if (findWinner( moves[17], moves[24], moves[31],moves[38])) {
+			status = new int [] {17,24,31,38};
+		}
+		
+		else if (findWinner(moves[18], moves[25], moves[32], moves[39])) {
+			status = new int [] {18,25,32,39};
+		}
+		
+		else if (findWinner( moves[19], moves[26],moves[33],moves[40])) {
+			status = new int [] {19,26,33,40};
+		}
+		
+		else if (findWinner( moves[20], moves[27], moves[34],moves[41])) {
+			status = new int [] {20,27,34,41};
+		}
+	    /////////////////////////////////////////////////////////////////////////////
+		
+		
+		// diag /////////////////////////////////////////////////////////////////////
 		else if (findWinner(moves[0], moves[8], moves[16], moves[24])) {
 			status = new int [] {0,8,16,24};
 		}
@@ -187,7 +278,7 @@ public class Connect4Service {
 		else if (findWinner(moves[17], moves[25], moves[33], moves[41])) {
 			status = new int [] {17,25,33,41};
 		}
-		
+		/////////////////////////////////////////////////////////////////////////
 		return status;
 	}
 	
