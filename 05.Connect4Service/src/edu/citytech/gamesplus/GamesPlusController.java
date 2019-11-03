@@ -201,45 +201,45 @@ public class GamesPlusController {
     	circ_35.setFill(Color.RED);
     	circ_36.setFill(Color.RED);
     	
-    	//circ_1.setFill(Color.BLUE);
-    	//circ_2.setFill(Color.BLUE);
-    	//circ_3.setFill(Color.BLUE);
-    	//circ_4.setFill(Color.BLUE);
-    	//circ_5.setFill(Color.BLUE);
-    	//circ_6.setFill(Color.BLUE);
-    	//circ_7.setFill(Color.BLUE);
-    	//circ_8.setFill(Color.BLUE);
-    	//circ_9.setFill(Color.BLUE);
-    	//
-    	//circ_10.setFill(Color.BLUE);
-    	//circ_11.setFill(Color.BLUE);
-    	//circ_12.setFill(Color.BLUE);
-    	//circ_13.setFill(Color.BLUE);
-    	//circ_14.setFill(Color.BLUE);
-    	//circ_15.setFill(Color.BLUE);
-    	//circ_16.setFill(Color.BLUE);
-    	//circ_17.setFill(Color.BLUE);
-    	//circ_18.setFill(Color.BLUE);
-    	//
-    	//circ_19.setFill(Color.BLUE);
-    	//circ_20.setFill(Color.BLUE);
-    	//circ_21.setFill(Color.BLUE);
-    	//circ_22.setFill(Color.BLUE);
-    	//circ_23.setFill(Color.BLUE);
-    	//circ_24.setFill(Color.BLUE);
-    	//circ_25.setFill(Color.BLUE);
-    	//circ_26.setFill(Color.BLUE);
-    	//circ_27.setFill(Color.BLUE);
-    	//
-    	//circ_28.setFill(Color.BLUE);
-    	//circ_29.setFill(Color.BLUE);
-    	//circ_30.setFill(Color.BLUE);
-    	//circ_31.setFill(Color.BLUE);
-    	//circ_32.setFill(Color.BLUE);
-    	//circ_33.setFill(Color.BLUE);
-    	//circ_34.setFill(Color.BLUE);
-    	//circ_35.setFill(Color.BLUE);
-    	//circ_36.setFill(Color.BLUE);
+    	circ_1.setFill(Color.YELLOW);
+    	circ_2.setFill(Color.YELLOW);
+    	circ_3.setFill(Color.YELLOW);
+    	circ_4.setFill(Color.YELLOW);
+    	circ_5.setFill(Color.YELLOW);
+    	circ_6.setFill(Color.YELLOW);
+    	circ_7.setFill(Color.YELLOW);
+    	circ_8.setFill(Color.YELLOW);
+    	circ_9.setFill(Color.YELLOW);
+    	
+    	circ_10.setFill(Color.YELLOW);
+    	circ_11.setFill(Color.YELLOW);
+    	circ_12.setFill(Color.YELLOW);
+    	circ_13.setFill(Color.YELLOW);
+    	circ_14.setFill(Color.YELLOW);
+    	circ_15.setFill(Color.YELLOW);
+    	circ_16.setFill(Color.YELLOW);
+    	circ_17.setFill(Color.YELLOW);
+    	circ_18.setFill(Color.YELLOW);
+    	
+    	circ_19.setFill(Color.YELLOW);
+    	circ_20.setFill(Color.YELLOW);
+    	circ_21.setFill(Color.YELLOW);
+    	circ_22.setFill(Color.YELLOW);
+    	circ_23.setFill(Color.YELLOW);
+    	circ_24.setFill(Color.YELLOW);
+    	circ_25.setFill(Color.YELLOW);
+    	circ_26.setFill(Color.YELLOW);
+    	circ_27.setFill(Color.YELLOW);
+    	
+    	circ_28.setFill(Color.YELLOW);
+    	circ_29.setFill(Color.YELLOW);
+    	circ_30.setFill(Color.YELLOW);
+    	circ_31.setFill(Color.YELLOW);
+    	circ_32.setFill(Color.YELLOW);
+    	circ_33.setFill(Color.YELLOW);
+    	circ_34.setFill(Color.YELLOW);
+    	circ_35.setFill(Color.YELLOW);
+    	circ_36.setFill(Color.YELLOW);
     	
     	
     	
