@@ -1,11 +1,11 @@
-package edu.citytech.service;
+package edu.citytech.dao;
 
 public class WinningCombo {
 
-	private final int p1;
-	private final int p2;
-	private final int p3;
-	private final int p4;
+	public final int p1;
+	public final int p2;
+	public final int p3;
+	public final int p4;
 
 
 	public WinningCombo(int p1, int p2, int p3, int p4) {

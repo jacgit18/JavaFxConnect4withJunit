@@ -3,282 +3,39 @@ package edu.citytech.service;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
+
+import edu.citytech.dao.WinningCombo;
+import edu.citytech.dao.WinningComboDAO;
 
 public class Connect4Service {
 
 	public static int getValidCellMoves(String[] moves, int i) {
 		
-		
-    	// try multi-dimensional array button will be filled first
-        // String [] [] moves1 = new String[6] [6]; // grid is 6 by 6
-
-		
-    			 int p = i;
-    			 boolean status;
-
-    			 
-		    			 while (p < moves.length) {
-		    	 status = moves [p].equals("?");
-		    	
-		    	if (status) {
-					p = p + 7;
-					
-				}else{
-					break;
-				}
-		    }
-				
-				return p;
+			
+				return 35;
 			}
 	
-	
-	/**
-	 * if no winner is found return an empty array
-	 * @param moves
-	 * @return
-	 */
+
 
 	public static int[] getWinner(String[] moves) {
 
 		int [] status = {};
-		
+		WinningComboDAO  dao = new WinningComboDAO();
+		List<WinningCombo> list = dao.findAll();
 		// Rows
 
-		if (findWinner(moves[0], moves[1], moves[2], moves[3])) {
-			status = new int [] {0,1,2,3};
-		}
-		
-		
-		else if (findWinner(moves[1], moves[2], moves[3], moves[4])) {
-			status = new int [] {1,2,3,4};
-		}
-		
-		else if (findWinner(moves[2], moves[3], moves[4], moves[5])) {
+		for (WinningCombo wc : list) {
 			
-			status = new int [] {2,3,4,5};
+		
+		if (findWinner(moves[wc.p1], moves[wc.p2], moves[wc.p3], moves[wc.p4])) {
+			status = new int [] {wc.p1,wc.p2,wc.p3,wc.p4};
+			break;
+		}
 		}
 		
-		else if (findWinner(moves[3], moves[4], moves[5], moves[6])) {
-			status = new int [] {3,4,5,6};
-		}
-		
-		else if (findWinner( moves[7], moves[8], moves[9], moves[10])) {
-			status = new int [] {7,8,9,10};
-		}
-		
-		else if (findWinner( moves[8], moves[9], moves[10], moves[11] )) {
-			status = new int [] {8,9,10,11};
-		}
-		
-		else if (findWinner( moves[9], moves[10], moves[11], moves[12] )) {
-			status = new int [] {9,10,11,12};
-		}
-		
-		else if (findWinner(moves[10], moves[11], moves[12],  moves[13]  )) {
-			status = new int [] {10,11,12,13};
-		}
-		
-		else if (findWinner(moves[14], moves[15], moves[16],  moves[17]  )) {
-			status = new int [] {14,15,16,17};
-		}
-		
-		else if (findWinner(moves[15], moves[16], moves[17],  moves[18]  )) {
-			status = new int [] {15,16,17,18};
-		}
-		
-		else if (findWinner(moves[16], moves[17], moves[18],  moves[19]  )) {
-			status = new int [] {16,17,18,19};
-		}
-		
-		else if (findWinner(moves[17], moves[18],  moves[19], moves[20]  )) {
-			status = new int [] {17,18,19, 20};
-		}
-		
-		else if (findWinner(moves[21], moves[22],  moves[23], moves[24]  )) {
-			status = new int [] {21,22,23, 24};
-		}
-		
-		else if (findWinner(moves[22],  moves[23], moves[24], moves[25]  )) {
-			status = new int [] {22,23,24,25};
-		}
-		
-		else if (findWinner(moves[23], moves[24], moves[25], moves[26]  )) {
-			status = new int [] {23, 24,25, 26};
-		}
-		else if (findWinner(moves[24], moves[25], moves[26], moves[27]  )) {
-			status = new int [] {24,25, 26, 27};
-		}
-		
-		else if (findWinner( moves[28], moves[29], moves[30],moves[31]  )) {
-			status = new int [] {28, 29, 30, 31};
-		}
-		
-		else if (findWinner( moves[29], moves[30],moves[31],moves[32]   )) {
-			status = new int [] { 29, 30, 31, 32};
-		}
-		
-		else if (findWinner( moves[30], moves[31], moves[32],moves[33]  )) {
-			status = new int [] {30, 31, 32, 33};
-		}
-		
-		else if (findWinner( moves[31], moves[32],moves[33],moves[34]   )) {
-			status = new int [] { 31, 32, 33, 34};
-		}
-		
-		else if (findWinner( moves[35], moves[36],moves[37],moves[38]   )) {
-			status = new int [] { 35, 36, 37, 38};
-		}
-		
-		else if (findWinner( moves[36], moves[37],moves[38],moves[39]   )) {
-			status = new int [] { 36, 37, 38, 39};
-		}
-		
-		else if (findWinner(  moves[37],moves[38],moves[39],moves[40]   )) {
-			status = new int [] {37, 38, 39, 40};
-		}
-		
-		else if (findWinner(  moves[38],moves[39],moves[40],moves[41]   )) {
-			status = new int [] {38, 39, 40, 41};
-		}
-	
-		// Columns //////////////////////////////////////////////////////
-		else if (findWinner(moves[0], moves[7], moves[14], moves[21])) {
-			status = new int [] {0,7,14,21};
-		}
-		
-		else if (findWinner(moves[1], moves[8], moves[15], moves[22])) {
-			status = new int [] {1,8,15,22};
-		}
-		
-		else if (findWinner(moves[2], moves[9], moves[16], moves[23])) {
-			status = new int [] {2,9,16,23};
-		}
-		
-		else if (findWinner(moves[3], moves[10], moves[17], moves[24])) {
-			status = new int [] {3,10,17,24};
-		}
-		
-		else if (findWinner(moves[4], moves[11], moves[18], moves[25])) {
-			status = new int [] {4,11,18,25};
-		}
-		
-		else if (findWinner(moves[5], moves[12], moves[19], moves[26])) {
-			status = new int [] {5,12,19,26};
-		}
-		
-		else if (findWinner( moves[6], moves[13], moves[20],moves[27])) {
-			status = new int [] {6,13,20,27};
-		}
-		
-		else if (findWinner( moves[7], moves[14], moves[21], moves[28])) {
-			status = new int [] {7,14,21,28};
-		}
-		
-		else if (findWinner(moves[8], moves[15], moves[22], moves[29])) {
-			status = new int [] {8,15,22,29};
-		}
-		
-		else if (findWinner( moves[9], moves[16], moves[23],moves[30])) {
-			status = new int [] {9,16,23,30};
-		}
-		
-		else if (findWinner( moves[10], moves[17], moves[24],moves[31])) {
-			status = new int [] {10,17,24,31};
-		}
-		
-		else if (findWinner(moves[11], moves[18], moves[25], moves[32])) {
-			status = new int [] {11,18,25,32};
-		}
-		
-		else if (findWinner(moves[12], moves[19], moves[26],moves[33])) {
-			status = new int [] {12,19,26,33};
-		}
-		
-		else if (findWinner( moves[13], moves[20], moves[27],moves[34])) {
-			status = new int [] {13,20,27,34};
-		}
-		
-		else if (findWinner( moves[14], moves[21], moves[28], moves[35] )) {
-			status = new int [] {14,21,28,35};
-		}
-		
-		else if (findWinner(moves[15], moves[22], moves[29], moves[36])) {
-			status = new int [] {15,22,29,36};
-		}
-		
-		else if (findWinner( moves[16], moves[23],moves[30],moves[37])) {
-			status = new int [] {16,23,30, 37};
-		}
-		
-		else if (findWinner( moves[17], moves[24], moves[31],moves[38])) {
-			status = new int [] {17,24,31,38};
-		}
-		
-		else if (findWinner(moves[18], moves[25], moves[32], moves[39])) {
-			status = new int [] {18,25,32,39};
-		}
-		
-		else if (findWinner( moves[19], moves[26],moves[33],moves[40])) {
-			status = new int [] {19,26,33,40};
-		}
-		
-		else if (findWinner( moves[20], moves[27], moves[34],moves[41])) {
-			status = new int [] {20,27,34,41};
-		}
-	    /////////////////////////////////////////////////////////////////////////////
-		
-		
-		// diag /////////////////////////////////////////////////////////////////////
-		else if (findWinner(moves[0], moves[8], moves[16], moves[24])) {
-			status = new int [] {0,8,16,24};
-		}
-		
-		else if (findWinner(moves[1], moves[9], moves[17], moves[25])) {
-			status = new int [] {1,9,17,25};
-		}
-		
-		else if (findWinner(moves[2], moves[10], moves[18], moves[26])) {
-			status = new int [] {2,10,18,26};
-		}
-		
-		else if (findWinner(moves[3], moves[11], moves[19], moves[27])) {
-			status = new int [] {3,11,19,27};
-		}
-		
-		else if (findWinner(moves[7], moves[15], moves[23], moves[31])) {
-			status = new int [] {7,15,23,31};
-		}
-		
-		else if (findWinner(moves[8], moves[16], moves[24], moves[32])) {
-			status = new int [] {8,16,24,32};
-		}
-		
-		else if (findWinner(moves[9], moves[17], moves[25], moves[33])) {
-			status = new int [] {9,17,25,33};
-		}
-		
-		else if (findWinner(moves[10], moves[18], moves[26], moves[34])) {
-			status = new int [] {10,18,26,34};
-		}
-		
-		else if (findWinner(moves[14], moves[22], moves[30], moves[38])) {
-			status = new int [] {14,22,30,38};
-		}
-		
-		else if (findWinner(moves[15], moves[23], moves[31], moves[39])) {
-			status = new int [] {15,23,31,39};
-		}
-		
-		else if (findWinner(moves[16], moves[24], moves[32], moves[40])) {
-			status = new int [] {16,24,32,40};
-		}
-		
-		else if (findWinner(moves[17], moves[25], moves[33], moves[41])) {
-			status = new int [] {17,25,33,41};
-		}
-		/////////////////////////////////////////////////////////////////////////
 		return status;
 	}
 	
@@ -288,7 +45,5 @@ public class Connect4Service {
 		
 		return status;
 	}
-	
-
-
 }
+

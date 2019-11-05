@@ -1,8 +1,10 @@
-package edu.citytech.service;
+package edu.citytech.dao;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class WinningComboDAO {
@@ -10,11 +12,12 @@ public class WinningComboDAO {
 	private static final String WINNING_COMBO = "winning-combination.txt";
 
 	public static void main(String[] args) {
-		e1();
-
+		WinningComboDAO  dao = new WinningComboDAO();
+		dao.findAll().forEach(System.out::println);
 	}
 
-	public static void e1() {
+	public List<WinningCombo> findAll() {
+		List<WinningCombo> list = new ArrayList<>();
 
 		InputStream in = WinningComboDAO.class.getResourceAsStream(WINNING_COMBO);
 	
@@ -36,9 +39,11 @@ public class WinningComboDAO {
 			p4 = Integer.parseInt(columns[5]);
 
 			WinningCombo wc = new WinningCombo(p1,p2,p3,p4);
-			System.out.println(wc);
+			list.add(wc);//access data outside
+//			System.out.println(wc);
 			}
 		}
+		return list;
 		
 	}
 

@@ -1,4 +1,4 @@
-package edu.citytech.service;
+package edu.citytech.dao;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
