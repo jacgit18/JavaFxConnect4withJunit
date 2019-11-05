@@ -160,7 +160,6 @@ public class GamesPlusController {
     void onMouseClicked(MouseEvent event) {
     	
 
-
     	circ_1.setFill(Color.RED);
     	circ_2.setFill(Color.RED);
     	circ_3.setFill(Color.RED);
@@ -200,6 +199,11 @@ public class GamesPlusController {
     	circ_34.setFill(Color.RED);
     	circ_35.setFill(Color.RED);
     	circ_36.setFill(Color.RED);
+    	
+    	
+//		if () {
+//					
+//				}
     	
     	circ_1.setFill(Color.YELLOW);
     	circ_2.setFill(Color.YELLOW);
