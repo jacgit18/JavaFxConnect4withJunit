@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.stream.Stream;
 
-public class ReadingFile {
+public class WinningComboDAO {
 
 	private static final String WINNING_COMBO = "winning-combination.txt";
 
@@ -16,7 +16,7 @@ public class ReadingFile {
 
 	public static void e1() {
 
-		InputStream in = ReadingFile.class.getResourceAsStream(WINNING_COMBO);
+		InputStream in = WinningComboDAO.class.getResourceAsStream(WINNING_COMBO);
 	
 		Stream<String> lines = new BufferedReader(new InputStreamReader(in))
 				                      .lines();
