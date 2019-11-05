@@ -30,8 +30,13 @@ public class ReadingFile {
 				isFirstTime = false;
 			else	{
 			String [] columns = object.toString().split(",");
-			new WinningCombo(p1,p2,p3,p4);
-			System.out.println(object);
+			p1 = Integer.parseInt(columns[2]);
+			p2 = Integer.parseInt(columns[3]);
+			p3 = Integer.parseInt(columns[4]);
+			p4 = Integer.parseInt(columns[5]);
+
+			WinningCombo wc = new WinningCombo(p1,p2,p3,p4);
+			System.out.println(wc);
 			}
 		}
 		
