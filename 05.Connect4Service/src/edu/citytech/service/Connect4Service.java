@@ -16,7 +16,7 @@ public class Connect4Service {
 		
 		
     	// try multi-dimensional array button will be filled first
-        // String [] [] moves1 = new String[6] [6]; // grid is 6 by 7
+        // String [] [] moves1 = new String[6] [7]; // grid is 6 by 7
 
 		
     			 int p = i;
