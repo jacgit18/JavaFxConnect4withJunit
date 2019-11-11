@@ -9,11 +9,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1004.0" prefWidth="840.0" styleClass="gamecolor" stylesheets="@GamesPlus.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.citytech.gamesplus.GamesPlusController">
    <children>
-      <Label layoutX="255.0" layoutY="84.0" styleClass="title-label" text="Connect 4" textFill="#e8d102" />
-      <Label fx:id="Name" layoutX="554.0" layoutY="974.0" text="Joshua Carpentier" textFill="#e8d102" />
-      <Label fx:id="lbl_Message" layoutX="211.0" layoutY="974.0" text="Label" textFill="#e8d102" />
-      <Button fx:id="btn_Reset" layoutX="392.0" layoutY="937.0" mnemonicParsing="false" onAction="#reset" prefHeight="59.0" prefWidth="83.0" styleClass="gamecolor1" text="Reset" textAlignment="CENTER" textFill="#e8d102" />
-      <GridPane fx:id="fpGames2" layoutX="94.0" layoutY="239.0" prefHeight="649.0" prefWidth="671.0">
+      <Label layoutX="242.0" layoutY="58.0" styleClass="title-label" text="Connect 4" textFill="#e8d102" />
+      <Label fx:id="Name" layoutX="709.0" layoutY="974.0" text="Joshua Carpentier" textFill="#e8d102" />
+      <Label fx:id="lbl_Message" layoutX="14.0" layoutY="966.0" prefHeight="16.0" prefWidth="357.0" text="Label" textFill="#e8d102" />
+      <Button fx:id="btn_Reset" layoutX="380.0" layoutY="875.0" mnemonicParsing="false" onAction="#reset" prefHeight="59.0" prefWidth="83.0" styleClass="gamecolor1" text="Reset" textAlignment="CENTER" textFill="#e8d102" />
+      <GridPane fx:id="fpGames2" layoutX="73.0" layoutY="165.0" prefHeight="667.0" prefWidth="697.0">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

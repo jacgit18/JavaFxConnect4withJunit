@@ -36,7 +36,8 @@ public class GamesMainPlus extends Application {
 		
 		String css = url .toExternalForm();
 		scene.getStylesheets().add(css);
-		
+		stage.setResizable(false);
+	    stage.show();
 
 		
 	}

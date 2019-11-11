@@ -70,8 +70,12 @@ public class GamesPlusController implements Initializable {
 	}
 	private boolean isX = true;
     private void clickedEvent(MouseEvent e) {
-    	Circle circle = new Circle();
-    	circle = (Circle) e.getSource();
+    	Circle circle = (Circle) e.getSource();
+    	
+    	if (!circle.getUserData().equals("?")) {
+		lbl_Message.setText("Invalid move as of " + new Date());
+		return;
+	}
 
     	String XorO = "";
     	if(isX) {
@@ -88,21 +92,30 @@ public class GamesPlusController implements Initializable {
 
 		}
     	isX = !isX;
-    	
     	circle.setUserData(XorO);
-    	lbl_Message.setText("Clicked on" + new Date());
+    	String [] moves = new String[42];
+    	
+    	for (int i = 0; i < circles.length; i++) {
+			moves[i] = (String) circles[i].getUserData();//
+		}
+    	
+    	int cellNumber = (int) circle.getUserData();
+    	String newMove = (String) circle.getUserData(); //
+    	moves[cellNumber] = "?";
+    	circle.setUserData("?");
+    	
+    	int nextMove = Connect4Service.getValidCellMoves(moves, cellNumber);
+    	
+    	circles[nextMove].setUserData(newMove);
+    	circles[nextMove].getStyleClass().add(XorO);
+
+    	
+    	lbl_Message.setText("Current index " + cellNumber + "next valid move is " + nextMove + "Clicked on" + new Date());
+//    	lbl_Message.setText("Clicked on" + new Date());
+
     }
 	
     private Circle[] circles = new Circle[42];
-
-    @FXML
-    void onMouseClicked(MouseEvent event) {
-
-
-    
-		}
-
-		
 
     @FXML
     void reset(ActionEvent event) {
