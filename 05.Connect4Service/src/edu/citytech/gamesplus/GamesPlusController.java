@@ -73,20 +73,21 @@ public class GamesPlusController implements Initializable {
     	Circle circle = (Circle) e.getSource();
     	
     	if (!circle.getUserData().equals("?")) {
-		lbl_Message.setText("Invalid move as of " + new Date());
-		return;
-	}
+
+    	}
+    	
+    	Data d  = new Data (d.index, d.XorO);
 
     	String XorO = "";
     	if(isX) {
     		XorO = "X";
-        	circle.setUserData("X");
+        	circle.setUserData(d);
         	circle.setFill(Color.RED);
 
     	}
     	else {
 			XorO = "O";
-	    	circle.setUserData("O");
+	    	circle.setUserData(d);
 	    	circle.setFill(Color.YELLOW);
 
 
