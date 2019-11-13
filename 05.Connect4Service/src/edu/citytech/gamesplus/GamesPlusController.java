@@ -61,7 +61,7 @@ public class GamesPlusController implements Initializable {
 				circle.setStrokeMiterLimit(10);
 				circle.setStrokeDashOffset(0);
 
-				circle.setUserData(i);
+				circle.setUserData(i);// problems
 				circle.setOnMouseClicked((MouseEvent e) -> this.clickedEvent(e));
 				fpGames2.add(circle, Coulmn, Rows);
 				i++;
@@ -75,10 +75,10 @@ public class GamesPlusController implements Initializable {
 		Circle circle = (Circle) e.getSource();
 
 		if (!circle.getUserData().equals("?")) {
-
+			lbl_Message.setText("Invalid Move: " + new Date());
 		}
 		
-		int cellNumber = Integer.parseInt( String.valueOf( circle.getUserData()));
+		int cellNumber = Integer.parseInt( String.valueOf( circle.getUserData())); // problem
 
 		String XorO = "";
 		if (isX) {
@@ -110,7 +110,7 @@ public class GamesPlusController implements Initializable {
 		circles[nextMove].getStyleClass().add(XorO);
 
 		lbl_Message
-				.setText("Current index " + cellNumber + "next valid move is " + nextMove + "Clicked on" + new Date());
+				.setText("Current index " + cellNumber + " next valid move is " + nextMove + " Clicked on" + new Date());
 //    	lbl_Message.setText("Clicked on" + new Date());
 
 	}
