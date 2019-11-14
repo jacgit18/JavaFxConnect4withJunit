@@ -41,6 +41,8 @@ public class GamesPlusController implements Initializable {
 	void checkFloatOption(ActionEvent event) {
 
 	}
+	
+
 
 	@Override
 	public void initialize(URL url, ResourceBundle resource) {
@@ -49,6 +51,7 @@ public class GamesPlusController implements Initializable {
 			for (int Coulmn = 0; Coulmn <= 6; Coulmn++) {
 				Circle circle = new Circle();
 				circles[i] = circle;
+
 				circle.setCenterX(100.0f);
 				circle.setCenterY(100.0f);
 				circle.setRadius(45.0f);
@@ -65,6 +68,7 @@ public class GamesPlusController implements Initializable {
 				circle.setOnMouseClicked((MouseEvent e) -> this.clickedEvent(e));
 				fpGames2.add(circle, Coulmn, Rows);
 				i++;
+
 			}
 
 	}
@@ -74,11 +78,20 @@ public class GamesPlusController implements Initializable {
 	private void clickedEvent(MouseEvent e) {
 		Circle circle = (Circle) e.getSource();
 
-		if (!circle.getUserData().equals("?")) {
-			lbl_Message.setText("Invalid Move: " + new Date());
+//		if (!circle.getUserData().equals("?")) {
+//			lbl_Message.setText("Invalid Move: " + new Date());
+//		}
+		
+		if (circle.getFill() != Color.WHITE) {
+			lbl_Message.setText("This is not your turn!");
+			return;
 		}
 		
+		
+		
+		System.out.println(circle.getUserData());
 		int cellNumber = Integer.parseInt( String.valueOf( circle.getUserData())); // problem
+
 
 		String XorO = "";
 		if (isX) {
@@ -94,7 +107,7 @@ public class GamesPlusController implements Initializable {
 		}
 		isX = !isX;
 		circle.setUserData(XorO);
-		String[] moves = new String[42];
+		String[] moves = new String[42];//
 
 		for (int i = 0; i < circles.length; i++) {
 			moves[i] = String.valueOf(circles[i].getUserData());
@@ -103,6 +116,7 @@ public class GamesPlusController implements Initializable {
 		String newMove = (String) circle.getUserData(); //
 		moves[cellNumber] = "?";
 		circle.setUserData("?");
+
 
 		int nextMove = Connect4Service.getValidCellMoves(moves, cellNumber);
 
