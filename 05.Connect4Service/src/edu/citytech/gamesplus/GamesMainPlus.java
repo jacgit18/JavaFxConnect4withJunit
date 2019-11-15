@@ -23,7 +23,6 @@ public class GamesMainPlus extends Application {
 		stage.setTitle("Connect 4");
 		Scene scene = new Scene(root); 
 		stage.setScene(scene);
-		stage.show();		
 
 	
 		URL url = getClass().getResource("GamesPlus2.css");
