@@ -48,6 +48,7 @@ public class GamesPlusController implements Initializable {
 		for (int Rows = 0; Rows <= 5; Rows++)
 			for (int Coulmn = 0; Coulmn <= 6; Coulmn++) {
 				Circle circle = new Circle();
+//				ValueHandler giveindex = new ValueHandler(i, isX);
 
 				circle.setCenterX(100.0f);
 				circle.setCenterY(100.0f);
@@ -88,15 +89,11 @@ public class GamesPlusController implements Initializable {
 		
 	
 		
-
-		
-		
-		
-		
 		System.out.println(circle.getUserData());
 		int cellNumber = Integer.parseInt( String.valueOf( circle.getUserData())); // problem
 //     	Data d  = new Data (d.index, d.XorO);
-		
+//		ValueHandler giveindex = new ValueHandler(i, isX );
+
 
 		String XorO = "";
 		if (isX) {
