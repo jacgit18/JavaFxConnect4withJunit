@@ -14,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.StrokeLineCap;
@@ -41,7 +42,6 @@ public class GamesPlusController implements Initializable {
 	void checkFloatOption(ActionEvent event) {
 
 	}
-	
 
 
 	@Override
@@ -50,7 +50,6 @@ public class GamesPlusController implements Initializable {
 		for (int Rows = 0; Rows <= 5; Rows++)
 			for (int Coulmn = 0; Coulmn <= 6; Coulmn++) {
 				Circle circle = new Circle();
-				circles[i] = circle;
 
 				circle.setCenterX(100.0f);
 				circle.setCenterY(100.0f);
@@ -63,8 +62,9 @@ public class GamesPlusController implements Initializable {
 				circle.setStrokeLineJoin(StrokeLineJoin.ROUND);
 				circle.setStrokeMiterLimit(10);
 				circle.setStrokeDashOffset(0);
+				circles[i] = circle;
 
-				circle.setUserData(i);// problems
+				circle.setUserData(i);// problems // come back figure out gravity
 				circle.setOnMouseClicked((MouseEvent e) -> this.clickedEvent(e));
 				fpGames2.add(circle, Coulmn, Rows);
 				i++;
@@ -88,10 +88,9 @@ public class GamesPlusController implements Initializable {
 		}
 		
 		
-		
 		System.out.println(circle.getUserData());
 		int cellNumber = Integer.parseInt( String.valueOf( circle.getUserData())); // problem
-
+//     	Data d  = new Data (d.index, d.XorO);
 
 		String XorO = "";
 		if (isX) {
