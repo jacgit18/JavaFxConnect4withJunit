@@ -2,6 +2,7 @@ package edu.citytech.gamesplus;
 
 import java.net.URL;
 import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import edu.citytech.dao.WinningCombo;
@@ -10,6 +11,7 @@ import edu.citytech.service.Connect4Service;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
@@ -37,11 +39,7 @@ public class GamesPlusController implements Initializable {
 
 	@FXML
 	private Button btn_Reset;
-
-	@FXML
-	void checkFloatOption(ActionEvent event) {
-
-	}
+	
 
 
 	@Override
@@ -77,20 +75,28 @@ public class GamesPlusController implements Initializable {
 
 	private void clickedEvent(MouseEvent e) {
 		Circle circle = (Circle) e.getSource();
+		String[] moves = new String[42];//
 
 //		if (!circle.getUserData().equals("?")) {
 //			lbl_Message.setText("Invalid Move: " + new Date());
 //		}
 		
 		if (circle.getFill() != Color.WHITE) {
-			lbl_Message.setText("This is not your turn!");
+			lbl_Message.setText("Not your turn");
 			return;
 		}
+		
+	
+		
+		
+		
+		
 		
 		
 		System.out.println(circle.getUserData());
 		int cellNumber = Integer.parseInt( String.valueOf( circle.getUserData())); // problem
 //     	Data d  = new Data (d.index, d.XorO);
+		
 
 		String XorO = "";
 		if (isX) {
@@ -106,7 +112,6 @@ public class GamesPlusController implements Initializable {
 		}
 		isX = !isX;
 		circle.setUserData(XorO);
-		String[] moves = new String[42];//
 
 		for (int i = 0; i < circles.length; i++) {
 			moves[i] = String.valueOf(circles[i].getUserData());
@@ -127,6 +132,8 @@ public class GamesPlusController implements Initializable {
 //    	lbl_Message.setText("Clicked on" + new Date());
 
 	}
+	
+	
 
 	private Circle[] circles = new Circle[42];
 
