@@ -63,7 +63,7 @@ public class GamesPlusController implements Initializable {
 				circle.setStrokeDashOffset(0);
 				circles[giveindex.getPosition()] = circle;
 
-				circle.setUserData(i);// problems // come back figure out gravity
+				circle.setUserData(giveindex.getPosition());// problems // come back figure out gravity
 				circle.setOnMouseClicked((MouseEvent e) -> this.clickedEvent(e));
 				fpGames2.add(circle, Coulmn, Rows);
 				i++;
@@ -111,7 +111,7 @@ public class GamesPlusController implements Initializable {
 
 		}
 		isX2 = !isX2;
-		circle.setUserData(XorO);
+		circle.setUserData(giveindex.getXorY());
 
 		for (i = 0; i < circles.length; i++) {
 			moves[i] = String.valueOf(circles[i].getUserData());
@@ -125,7 +125,7 @@ public class GamesPlusController implements Initializable {
 		int nextMove = Connect4Service.getValidCellMoves(moves, cellNumber);
 
 		circles[nextMove].setUserData(newMove);
-		circles[nextMove].getStyleClass().add(XorO);
+		circles[nextMove].getStyleClass().add(giveindex.getXorY());
 
 		lbl_Message
 				.setText("Current index " + cellNumber + " next valid move is " + nextMove + " Clicked on" + new Date());
