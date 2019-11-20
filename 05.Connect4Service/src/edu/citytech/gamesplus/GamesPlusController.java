@@ -40,6 +40,7 @@ public class GamesPlusController implements Initializable {
 	@FXML
 	private Button btn_Reset;
 	
+	private Circle[] circles = new Circle[42];
 
 
 	@Override
@@ -48,7 +49,7 @@ public class GamesPlusController implements Initializable {
 		for (int Rows = 0; Rows <= 5; Rows++)
 			for (int Coulmn = 0; Coulmn <= 6; Coulmn++) {
 				Circle circle = new Circle();
-				ValueHandler giveindex = new ValueHandler(i, isX);
+				ValueHandler giveindex = new ValueHandler(i, isX, null);
 
 				circle.setCenterX(100.0f);
 				circle.setCenterY(100.0f);
@@ -63,7 +64,7 @@ public class GamesPlusController implements Initializable {
 				circle.setStrokeDashOffset(0);
 				circles[giveindex.getPosition()] = circle;
 
-				circle.setUserData(giveindex.getPosition());// problems // come back figure out gravity
+				circle.setUserData(i);// problems // come back figure out gravity
 				circle.setOnMouseClicked((MouseEvent e) -> this.clickedEvent(e));
 				fpGames2.add(circle, Coulmn, Rows);
 				i++;
@@ -89,12 +90,12 @@ public class GamesPlusController implements Initializable {
 		}
 		String XorO = "";
 
-		ValueHandler giveindex = new ValueHandler(i, XorO);
+		ValueHandler giveindex = new ValueHandler(i, XorO, moves);
 
 	
 		
 		System.out.println(circle.getUserData());
-		int cellNumber = Integer.parseInt( String.valueOf( circle.getUserData())); // problem
+		int cellNumber = (int) circle.getUserData(); // problem
 //     	Data d  = new Data (d.index, d.XorO);
 //		ValueHandler giveindex = new ValueHandler(i, isX );
 
@@ -111,7 +112,7 @@ public class GamesPlusController implements Initializable {
 
 		}
 		isX2 = !isX2;
-		circle.setUserData(giveindex.getXorY());
+		circle.setUserData(XorO);
 
 		for (i = 0; i < circles.length; i++) {
 			moves[i] = String.valueOf(circles[i].getUserData());
@@ -125,7 +126,7 @@ public class GamesPlusController implements Initializable {
 		int nextMove = Connect4Service.getValidCellMoves(moves, cellNumber);
 
 		circles[nextMove].setUserData(newMove);
-		circles[nextMove].getStyleClass().add(giveindex.getXorY());
+		circles[nextMove].getStyleClass().add(XorO);
 
 		lbl_Message
 				.setText("Current index " + cellNumber + " next valid move is " + nextMove + " Clicked on" + new Date());
@@ -135,7 +136,6 @@ public class GamesPlusController implements Initializable {
 	
 	
 
-	private Circle[] circles = new Circle[42];
 
 	@FXML
 	void reset(ActionEvent event) {
