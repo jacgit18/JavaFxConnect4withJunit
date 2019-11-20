@@ -48,7 +48,7 @@ public class GamesPlusController implements Initializable {
 		for (int Rows = 0; Rows <= 5; Rows++)
 			for (int Coulmn = 0; Coulmn <= 6; Coulmn++) {
 				Circle circle = new Circle();
-//				ValueHandler giveindex = new ValueHandler(i, isX);
+				ValueHandler giveindex = new ValueHandler(i, isX);
 
 				circle.setCenterX(100.0f);
 				circle.setCenterY(100.0f);
@@ -61,7 +61,7 @@ public class GamesPlusController implements Initializable {
 				circle.setStrokeLineJoin(StrokeLineJoin.ROUND);
 				circle.setStrokeMiterLimit(10);
 				circle.setStrokeDashOffset(0);
-				circles[i] = circle;
+				circles[giveindex.getPosition()] = circle;
 
 				circle.setUserData(i);// problems // come back figure out gravity
 				circle.setOnMouseClicked((MouseEvent e) -> this.clickedEvent(e));
@@ -71,13 +71,14 @@ public class GamesPlusController implements Initializable {
 			}
 
 	}
+	private String isX = "";
 
-	private boolean isX = true;
+	private boolean isX2 = true;
 
 	private void clickedEvent(MouseEvent e) {
 		Circle circle = (Circle) e.getSource();
 		String[] moves = new String[42];//
-
+		int i = 0;
 //		if (!circle.getUserData().equals("?")) {
 //			lbl_Message.setText("Invalid Move: " + new Date());
 //		}
@@ -86,7 +87,10 @@ public class GamesPlusController implements Initializable {
 			lbl_Message.setText("Not your turn");
 			return;
 		}
-		
+		String XorO = "";
+
+		ValueHandler giveindex = new ValueHandler(i, XorO);
+
 	
 		
 		System.out.println(circle.getUserData());
@@ -95,22 +99,21 @@ public class GamesPlusController implements Initializable {
 //		ValueHandler giveindex = new ValueHandler(i, isX );
 
 
-		String XorO = "";
-		if (isX) {
+		if (isX2) {
 			XorO = "X";
-			circle.setUserData(XorO);
+			circle.setUserData(giveindex.getXorY());
 			circle.setFill(Color.RED);
 
 		} else {
 			XorO = "O";
-			circle.setUserData(XorO);
+			circle.setUserData(giveindex.getXorY());
 			circle.setFill(Color.YELLOW);
 
 		}
-		isX = !isX;
+		isX2 = !isX2;
 		circle.setUserData(XorO);
 
-		for (int i = 0; i < circles.length; i++) {
+		for (i = 0; i < circles.length; i++) {
 			moves[i] = String.valueOf(circles[i].getUserData());
 		}
 
@@ -143,7 +146,7 @@ public class GamesPlusController implements Initializable {
 
 			circle.getStyleClass().removeIf(e -> e.equals("X") || e.equals("O"));
 		}
-		isX = true;
+		isX2 = true;
 		lbl_Message.setText(" ");
 
 	}
