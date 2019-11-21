@@ -90,7 +90,7 @@ public class GamesPlusController implements Initializable {
 		}
 		String XorO = "";
 
-		ValueHandler giveindex = new ValueHandler(i, XorO, moves);
+		ValueHandler giveindex2 = new ValueHandler(i, XorO, moves);
 
 	
 		
@@ -102,12 +102,12 @@ public class GamesPlusController implements Initializable {
 
 		if (isX2) {
 			XorO = "X";
-			circle.setUserData(giveindex.getXorY());
+			circle.setUserData(giveindex2.getXorY());
 			circle.setFill(Color.RED);
 
 		} else {
 			XorO = "O";
-			circle.setUserData(giveindex.getXorY());
+			circle.setUserData(giveindex2.getXorY());
 			circle.setFill(Color.YELLOW);
 
 		}
@@ -126,7 +126,7 @@ public class GamesPlusController implements Initializable {
 		int nextMove = Connect4Service.getValidCellMoves(moves, cellNumber);
 
 		circles[nextMove].setUserData(newMove);
-		circles[nextMove].getStyleClass().add(XorO);
+		circles[nextMove].getStyleClass().add(giveindex2.getXorY());
 
 		lbl_Message
 				.setText("Current index " + cellNumber + " next valid move is " + nextMove + " Clicked on" + new Date());
