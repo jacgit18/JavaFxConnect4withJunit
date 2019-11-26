@@ -115,6 +115,9 @@ public class GamesPlusController implements Initializable {
 		circle.setUserData(XorO);
 
 		for (i = 0; i < circles.length; i++) {
+			if (circles.length <= 0) {
+				
+			}
 			moves[i] = String.valueOf(circles[i].getUserData());
 		}
 
