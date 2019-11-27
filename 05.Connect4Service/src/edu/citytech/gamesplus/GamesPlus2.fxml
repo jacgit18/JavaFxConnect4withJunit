@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1004.0" prefWidth="840.0" styleClass="gamecolor" stylesheets="@GamesPlus.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.citytech.gamesplus.GamesPlusController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1004.0" prefWidth="840.0" styleClass="gamecolor" stylesheets="@GamesPlus2.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.citytech.gamesplus.GamesPlusController2">
    <children>
       <Label layoutX="242.0" layoutY="58.0" styleClass="title-label" text="Connect 4" textFill="#e8d102" />
       <Label fx:id="Name" layoutX="709.0" layoutY="974.0" text="Joshua Carpentier" textFill="#e8d102" />

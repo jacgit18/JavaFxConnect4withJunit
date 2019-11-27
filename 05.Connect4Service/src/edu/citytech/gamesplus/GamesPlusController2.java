@@ -1,165 +1,157 @@
 package edu.citytech.gamesplus;
 
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.ResourceBundle;
+
+import edu.citytech.dao.WinningCombo;
+import edu.citytech.dao.WinningComboDAO;
+import edu.citytech.service.Connect4Service;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.StrokeLineCap;
+import javafx.scene.shape.StrokeLineJoin;
+import javafx.scene.shape.StrokeType;
 
-public class GamesPlusController2 {
+public class GamesPlusController2 implements Initializable {
 
-    @FXML
-    private FlowPane fpGames;
+	@FXML
+	private GridPane fpGames2;
 
-    @FXML
-    private HBox Row1;
+	@FXML
+	private Label Title;
 
-    @FXML
-    private Circle circ_1;
+	@FXML
+	private Label Name;
 
-    @FXML
-    private Circle circ_2;
+	@FXML
+	private Label lbl_Message;
 
-    @FXML
-    private Circle circ_3;
+	@FXML
+	private Button btn_Reset;
+	
+	private Circle[] circles = new Circle[42];
 
-    @FXML
-    private Circle circ_4;
 
-    @FXML
-    private Circle circ_5;
+	@Override
+	public void initialize(URL url, ResourceBundle resource) {
+		int i = 0;
+		for (int Rows = 0; Rows <= 5; Rows++)
+			for (int Coulmn = 0; Coulmn <= 6; Coulmn++) {
+				Circle circle = new Circle();
+				ValueHandler giveindex = new ValueHandler(i, isX, null);
 
-    @FXML
-    private Circle circ_6;
+				circle.setCenterX(100.0f);
+				circle.setCenterY(100.0f);
+				circle.setRadius(45.0f);
+				circle.setFill(Color.WHITE);
+				circle.setStroke(Color.rgb(18, 97, 183));
+				circle.setStrokeWidth(5);
+				circle.setStrokeType(StrokeType.OUTSIDE);
+				circle.setStrokeLineCap(StrokeLineCap.ROUND);
+				circle.setStrokeLineJoin(StrokeLineJoin.ROUND);
+				circle.setStrokeMiterLimit(10);
+				circle.setStrokeDashOffset(0);
+				circles[giveindex.getPosition()] = circle;
 
-    @FXML
-    private HBox Row2;
+				circle.setUserData(i);// problems // come back figure out gravity
+				circle.setOnMouseClicked((MouseEvent e) -> this.clickedEvent(e));
+				fpGames2.add(circle, Coulmn, Rows);
+				i++;
 
-    @FXML
-    private Circle circ_7;
+			}
 
-    @FXML
-    private Circle circ_8;
+	}
+	private String isX = "";
 
-    @FXML
-    private Circle circ_9;
+	private boolean isX2 = true;
 
-    @FXML
-    private Circle circ_10;
+	private void clickedEvent(MouseEvent e) {
+		Circle circle = (Circle) e.getSource();
+		String[] moves = new String[42];//
+		int i = 0;
+//		if (!circle.getUserData().equals("?")) {
+//			lbl_Message.setText("Invalid Move: " + new Date());
+//		}
+		
+		if (circle.getFill() != Color.WHITE) {
+			lbl_Message.setText("Not your turn");
+			return;
+		}
+		String XorO = "";
 
-    @FXML
-    private Circle circ_11;
+		ValueHandler giveindex2 = new ValueHandler(i, XorO, moves);
 
-    @FXML
-    private Circle circ_12;
+	
+		
+		System.out.println(circle.getUserData());
+		int cellNumber = (int) circle.getUserData(); // problem
+//     	Data d  = new Data (d.index, d.XorO);
+//		ValueHandler giveindex = new ValueHandler(i, isX );
 
-    @FXML
-    private HBox Row3;
 
-    @FXML
-    private Circle circ_13;
+		if (isX2) {
+			XorO = "X";
+			circle.setUserData(giveindex2.getXorY());
+			circle.setFill(Color.RED);
 
-    @FXML
-    private Circle circ_14;
+		} else {
+			XorO = "O";
+			circle.setUserData(giveindex2.getXorY());
+			circle.setFill(Color.YELLOW);
 
-    @FXML
-    private Circle circ_15;
+		}
+		isX2 = !isX2;
+		circle.setUserData(XorO);
 
-    @FXML
-    private Circle circ_16;
+		for (i = 0; i < circles.length; i++) {
+			if (circles.length <= 0) {
+				
+			}
+			moves[i] = String.valueOf(circles[i].getUserData());
+		}
 
-    @FXML
-    private Circle circ_17;
+		String newMove = (String) circle.getUserData(); //
+		moves[cellNumber] = "?";
+		circle.setUserData("?");
 
-    @FXML
-    private Circle circ_18;
 
-    @FXML
-    private HBox Row4;
+		int nextMove = Connect4Service.getValidCellMoves(moves, cellNumber);
 
-    @FXML
-    private Circle circ_19;
+		circles[nextMove].setUserData(newMove);
+		circles[nextMove].getStyleClass().add(giveindex2.getXorY());
 
-    @FXML
-    private Circle circ_20;
+		lbl_Message
+				.setText("Current index " + cellNumber + " next valid move is " + nextMove + " Clicked on" + new Date());
+//    	lbl_Message.setText("Clicked on" + new Date());
 
-    @FXML
-    private Circle circ_21;
+	}
+	
+	
 
-    @FXML
-    private Circle circ_22;
 
-    @FXML
-    private Circle circ_23;
+	@FXML
+	void reset(ActionEvent event) {
 
-    @FXML
-    private Circle circ_24;
+		for (Circle circle : circles) {
 
-    @FXML
-    private HBox Row5;
+			circle.setFill(Color.WHITE);
 
-    @FXML
-    private Circle circ_25;
+			circle.getStyleClass().removeIf(e -> e.equals("X") || e.equals("O"));
+		}
+		isX2 = true;
+		lbl_Message.setText(" ");
 
-    @FXML
-    private Circle circ_26;
-
-    @FXML
-    private Circle circ_27;
-
-    @FXML
-    private Circle circ_28;
-
-    @FXML
-    private Circle circ_29;
-
-    @FXML
-    private Circle circ_30;
-
-    @FXML
-    private HBox Row6;
-
-    @FXML
-    private Circle circ_31;
-
-    @FXML
-    private Circle circ_32;
-
-    @FXML
-    private Circle circ_33;
-
-    @FXML
-    private Circle circ_34;
-
-    @FXML
-    private Circle circ_35;
-
-    @FXML
-    private Circle circ_36;
-
-    @FXML
-    private Label Title;
-
-    @FXML
-    private Label Name;
-
-    @FXML
-    private Label lbl_Message;
-
-    @FXML
-    private Button btn_Reset;
-
-    @FXML
-    void onMouseClicked(MouseEvent event) {
-
-    }
-
-    @FXML
-    void reset(ActionEvent event) {
-
-    }
+	}
 
 }
