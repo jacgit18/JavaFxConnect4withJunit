@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="834.0" prefWidth="863.0" styleClass="gamecolor" stylesheets="@GamesPlus3.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.citytech.gamesplus.GamesPlusController4">
+	<children>
+		<FlowPane fx:id="fpGames3" layoutX="72.0" layoutY="92.0" prefHeight="604.0" prefWidth="720.0" />
+		<Label layoutX="24.0" layoutY="7.0" prefHeight="85.0" prefWidth="758.0" styleClass="title-label" text="Connect 4" />
+		<Button fx:id="btn_Reset" layoutX="403.0" layoutY="718.0" mnemonicParsing="false" styleClass="gamecolor1" text="Reset" textFill="#d3a144" />
+		<Label fx:id="lbl_Message" layoutX="72.0" layoutY="754.0" prefHeight="17.0" prefWidth="720.0" text="Game Moves" />
+      <Label layoutX="373.0" layoutY="792.0" text="Joshua Carpentier" />		
+	</children>
+</AnchorPane>

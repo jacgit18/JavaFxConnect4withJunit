@@ -18,19 +18,22 @@ public class GamesMainPlus extends Application {
 	@Override
 	public void start(Stage stage) throws Exception {
 
-		Parent root = FXMLLoader.
-				 load(getClass().getResource("GamesPlus1.fxml"));
+//		Parent root = FXMLLoader.
+//				 load(getClass().getResource("GamesPlus1.fxml"));
 		
 //		Parent root = FXMLLoader.
 //		 load(getClass().getResource("GamesPlus2.fxml"));
+		
+		Parent root = FXMLLoader.
+		 load(getClass().getResource("GamesPlus4.fxml"));
 
 		
 		stage.setTitle("Connect 4");
 		Scene scene = new Scene(root); 
 		stage.setScene(scene);
 
-		URL url = getClass().getResource("GamesPlus1.css");
-//		URL url = getClass().getResource("GamesPlus2.css");
+//		URL url = getClass().getResource("GamesPlus1.css");
+		URL url = getClass().getResource("GamesPlus3.css");
 
 		if(url == null) {
 			System.out.println("Resources not found Aborting");

@@ -1,0 +1,74 @@
+.title-label{
+   -fx-font-size: 70px;
+   -fx-alignment: center;
+}
+
+
+.gamecolor{
+   -fx-background-color: #1261B7;
+   
+}
+
+.gamecolor1{
+   -fx-background-color: #000000;
+   -fx-border-color: #e8d102;
+   
+}
+
+
+.custom-label {
+   -fx-alignment: center;
+   -fx-background-color: #bbb;
+   -fx-border-color:black;
+   -fx-min-height: 60px;
+   -fx-min-width: 65px;
+   -fx-border-insets: .55px
+   
+}
+
+.border{
+	-fx-border-color: black;
+    -fx-border-width: 5px 3px 5px 3px;
+	-fx-border-style: solid;
+	
+}
+
+
+.custom-label2, .winner {
+   -fx-border-color:black;
+   -fx-min-width: 100;
+   -fx-min-height: 100;
+    
+   -fx-border-radius:60;
+   -fx-background-radius:60;
+   -fx-text-fill:white;
+   
+   
+}
+
+.X{
+   -fx-background-color:yellow;
+   -fx-text-fill:yellow;
+
+}
+
+.O{
+   -fx-background-color:red;
+   -fx-text-fill:red;
+
+}
+   
+     
+.winner {	
+	-fx-text-fill:red;
+}
+
+.possibleMove {	
+	-fx-text-fill:blue;
+}
+#fpGames2{
+	-fx-pref-height:400px;
+	-fx-background-radius: 10px;
+	-fx-hgap:90px;
+	-fx-vgap:90px;
+}
